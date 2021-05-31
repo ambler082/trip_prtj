@@ -4,125 +4,33 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-	<title>해파리 주간보고</title>
+	<title>부산 문화재 탐방</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">		
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id=logo>
-		<img alt="로고" src="{% static '/logo.png' %}"/>
+		<img alt="로고" src="{% static '/logo2.png' %}" width="354" height="283"/>
 	</div>
-	<div id="h1"><h1>해파리 주간보고</h1></div>
+	<div id="h1"><h1>부산 문화재 탐방</h1></div>
 	
 	<div id="map">
 		<div class="map_img">
-			{% for candidate in candidates %}
-			{% if candidate.rdate == request.GET.rdate %}
-			<img id="realmap" src= {{candidate.news_pic_nam}} alt="한반도"/>
+			{% for azureex in azureexs %}
+			{% if azureex.문화재명 == request.GET.문화재명 %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=82fccfe26d7dd0145625a442c08b9a5b"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.166952904756, 128.9942414861), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+				</script>
 			{% endif %}
 			{% endfor %}
 	    </div>
-
-	    <div id="map-in-left">
-			{% for candidate in candidates %}
-			{% if candidate.rdate == request.GET.rdate %}
-		    <div id="table-top">
-		    <h3 id="h3">조치사항</h3>
-				<p>{{candidate.news_desc_01}}</p>
-				<p>{{candidate.news_desc_02}}</p>
-		    </div>
-		    <div id="table-bottom">
-		    <h3 id="h3">금후전망</h3>
-				<p>{{candidate.news_desc_03}}</p>
-		    </div>
-			{% endif %}
-			{% endfor %}
-	    </div>
-
-	    <div id="map-in-right">
-	    <table class="table table-striped table-hover text-center">
-	        <thead>
-	        <tr>
-	            <td><B>  </B></td>
-	            <td><B>노무라입깃해파리</B></td>
-	            <td><B>보름달물해파리</B></td>
-	            <td><B>기타 해파리</B></td>
-	        </tr>
-	        </thead>
-	        <tbody>
-			{% for candidate in candidates %}
-				{% if candidate.rdate == request.GET.rdate %}
-	        <tr>
-	            <td>인천</td>
-	            <td>{{candidate.nom_ratio_01}}</td>
-	            <td>{{candidate.bor_ratio_01}}</td>
-	            <td>{{candidate.etc_ratio_01}}</td>
-			</tr>
-			<tr>
-				<td>경기</td>
-	            <td>{{candidate.nom_ratio_02}}</td>
-	            <td>{{candidate.bor_ratio_02}}</td>
-	            <td>{{candidate.etc_ratio_02}}</td>
-			</tr>
-			<tr>
-				<td>충남</td>
-	            <td>{{candidate.nom_ratio_03}}</td>
-	            <td>{{candidate.bor_ratio_03}}</td>
-	            <td>{{candidate.etc_ratio_03}}</td>
-	        </tr>
-			<tr>
-				<td>전북</td>
-	            <td>{{candidate.nom_ratio_04}}</td>
-	            <td>{{candidate.bor_ratio_04}}</td>
-	            <td>{{candidate.etc_ratio_04}}</td>
-			</tr>
-			<tr>
-				<td>전남</td>
-	            <td>{{candidate.nom_ratio_05}}</td>
-	            <td>{{candidate.bor_ratio_05}}</td>
-	            <td>{{candidate.etc_ratio_05}}</td>
-			</tr>
-			<tr>
-				<td>경남</td>
-	            <td>{{candidate.nom_ratio_07}}</td>
-	            <td>{{candidate.bor_ratio_07}}</td>
-	            <td>{{candidate.etc_ratio_07}}</td>
-			</tr>
-			<tr>
-				<td>부산</td>
-	            <td>{{candidate.nom_ratio_08}}</td>
-	            <td>{{candidate.bor_ratio_08}}</td>
-	            <td>{{candidate.etc_ratio_08}}</td>
-			</tr>
-			<tr>
-				<td>울산</td>
-	            <td>{{candidate.nom_ratio_09}}</td>
-	            <td>{{candidate.bor_ratio_09}}</td>
-	            <td>{{candidate.etc_ratio_09}}</td>
-			</tr>
-			<tr>
-				<td>경북</td>
-	            <td>{{candidate.nom_ratio_10}}</td>
-	            <td>{{candidate.bor_ratio_10}}</td>
-	            <td>{{candidate.etc_ratio_10}}</td>
-			</tr>
-			<tr>
-				<td>강원도</td>
-	            <td>{{candidate.nom_ratio_11}}</td>
-	            <td>{{candidate.bor_ratio_11}}</td>
-	            <td>{{candidate.etc_ratio_11}}</td>
-			</tr>
-			<tr>
-				<td>제주도</td>
-	            <td>{{candidate.nom_ratio_12}}</td>
-	            <td>{{candidate.bor_ratio_12}}</td>
-	            <td>{{candidate.etc_ratio_12}}</td>
-			</tr>
-				{% endif %}
-			 {% endfor %}
-	        </tbody>
-	    </table>
-		</div>
 	</div>
 
 	<div class="container">
@@ -130,29 +38,20 @@
 	        <thead>
 	        <tr>
 	            <td><B>번호</B></td>
-	            <td><B>제목</B></td>
-	            <td><B>기관</B></td>
-	            <td><B>등록일</B></td>
+	            <td><B>문화재명</B></td>
+	            <td><B>지정번호</B></td>
+	            <td><B>소재지</B></td>
 	        </tr>
 	        </thead>
 	        <tbody>
-	        <tr>
-	            <td>1</td>
-				<td><a href="{% url 'index' %}?rdate=2020.11.26 " >해파리 모니터링 주간보고 (2020년 11월26일)</a></td>
-	            <td>기후변화연구과</td>
-	            <td>2020.11.26</td>
-	        </tr>
-	        <tr>
-	            <td>2</td>
-	            <td><a href="{% url 'index' %}?rdate=2020.11.19">해파리 모니터링 주간보고 (2020년 11월19일)</a></td>
-	            <td>기후변화연구과</td>
-	            <td>2020.11.19</td>
-	        </tr>
-	        <tr>
-	            <td>3</td>
-	            <td><a href="{% url 'index' %}?rdate=2020.11.12">해파리 모니터링 주간보고 (2020년 11월12일)</a></td>
-	            <td>기후변화연구과</td>
-	            <td>2020.11.12</td>
+				{% for azureex in azureexs %}
+				<tr>
+					<td>{{azureex.연번}}</td>
+					<td><a href="{% url 'index' %}?문화재명={{azureex.문화재명}} " >{{azureex.문화재명}}</a></td>
+					<td>{{azureex.지정번호}}</td>
+					<td>{{azureex.소재지}}</td>
+				</tr>
+				{% endfor %}
 	        </tr>
 	        </tbody>
 	    </table>

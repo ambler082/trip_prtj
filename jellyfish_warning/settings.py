@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'catalog',
+    #'catalog',
+    'sql_server.pyodbc',
+    'catalog.apps.ElectionsConfig',
 ]
 
 MIDDLEWARE = [
@@ -74,12 +76,28 @@ WSGI_APPLICATION = 'jellyfish_warning.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+DATABASE_ENGINE='sql_server.pyodbc'
+
 DATABASES = {
+   # 'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': str(os.path.join(BASE_DIR, 'db.sqlite3')),
+   # },
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(os.path.join(BASE_DIR, 'db.sqlite3')),
-    }
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'need',
+        'USER': 'need',
+        'PASSWORD': 'bh947018!',
+        'HOST': 'need.database.windows.net',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
+    },
 }
+
+#DATABASE_CONNECTION_POOLING = False
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

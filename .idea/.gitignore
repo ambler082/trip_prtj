@@ -1,3 +1,11 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+* .py [ co ]
+* .sw [ az ]
+* .orig
+* ~
+.DS_Store
+Thumbs.db
+
+* .egg-info
