@@ -32,14 +32,14 @@ ALLOWED_HOSTS = ['*',
 # Application definition
 
 INSTALLED_APPS = [
+    'sql_server',
+    'sql_server.pyodbc',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'catalog',
-    'sql_server.pyodbc',
     'catalog.apps.ElectionsConfig',
 ]
 
