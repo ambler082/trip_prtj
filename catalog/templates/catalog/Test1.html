@@ -24,19 +24,19 @@
 					<script>
 					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 						mapOption = {
-							center: new kakao.maps.LatLng(35.166952904756, 128.9942414861), // 지도의 중심좌표
+							center: new kakao.maps.LatLng(37.56272954531865, 126.97978086507226), // 지도의 중심좌표
 							level: 6, // 지도의 확대 레벨
 							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
 						}; 
 					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
 					
 					var marker = new kakao.maps.Marker({
-						position: new kakao.maps.LatLng(35.166952904756, 128.9942414861), // 마커의 좌표
+						position: new kakao.maps.LatLng(37.56272954531865, 126.97978086507226), // 마커의 좌표
 						map: map // 마커를 표시할 지도 객체
 						});
 					
 					var infowindow = new kakao.maps.InfoWindow({
-         				 content : '<div2 style="padding:5px; color="black";>문화재</div>' // 인포윈도우에 표시할 내용
+         				 content : '<div2 style="padding:5px; color="black";>조숭고신왕지</div>' // 인포윈도우에 표시할 내용
      					 });	
 					infowindow.open(map, marker);	  
 				</script>
@@ -46,12 +46,418 @@
 					<script>
 					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 						mapOption = {
-							center: new kakao.maps.LatLng(35.19727, 129.07457), // 지도의 중심좌표
+							center: new kakao.maps.LatLng(37.56272954531865, 126.97978086507226), // 지도의 중심좌표
 							level: 6, // 지도의 확대 레벨
 							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
 						}; 
 					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
-				</script>	
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(37.56272954531865, 126.97978086507226), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>조서경무과홍패</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+				
+			{% elif request.GET.문화재명 == '박만정 해서암행일기' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.15685188069472, 129.14502325502204), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.15685188069472, 129.14502325502204), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>박민정 해서암행일기</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '송정역' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.18125536839884, 129.2004474841255), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.18125536839884, 129.2004474841255), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>송정역</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '동하면 고문서' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.12978979292557, 129.0941617264522), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.12978979292557, 129.0941617264522), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>동하면 고문서</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '폭포사 묘법연화경' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.12961430103019, 129.09415099761634), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.12961430103019, 129.09415099761634), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>폭포사 묘법연화경</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '백운사 묘법연화경 권1-3' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.18797499339827, 129.1620923822745), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.18797499339827, 129.1620923822745), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>백운사 묘법연화경 권1-3</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '백운사 묘법연화경권4-7' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.24039075886298, 129.1436230552914), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.24039075886298, 129.1436230552914), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>백운사 묘법연화경권4-7</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+			
+			{% elif request.GET.문화재명 == '해운정사 전법게' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.24039952151407, 129.14355868227608), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.24039952151407, 129.14355868227608), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>해운정사 전법게</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '원오사 고봉화상선요' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.168388211668315, 129.15956649576628), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.168388211668315, 129.15956649576628), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>원오사 고봉화상선요</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '해운정사 삼층석탑' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.23481433148532, 129.16007521111166), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.23481433148532, 129.16007521111166), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>해운정사 삼층석탑</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '동장각장' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.16837067081785, 129.15968451296106), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.16837067081785, 129.15968451296106), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>동장각장</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '삼절사' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.229591393019675, 129.1611823804246), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.229591393019675, 129.1611823804246), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>삼절사</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '석조보살좌상 舊)석존상' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.201935784870585, 129.13671239576732), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.201935784870585, 129.13671239576732), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>석조보살좌상 舊)석존상</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '원각사 현왕도' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.1978119765001, 129.16734737694992), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.1978119765001, 129.16734737694992), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>원각사 현왕도</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '해운정사 선문염송집' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.168467145448616, 129.15955576693042), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.168467145448616, 129.15955576693042), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>해운정사 선문염송집</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '해운정사 현수제승법수' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.168467145448616, 129.15955576693042), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.168467145448616, 129.15955576693042), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>해운정사 현수제승법수</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '해운대석각' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.15261587872549, 129.15281641296056), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.15261587872549, 129.15281641296056), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>해운대석각</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '동백섬' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.15261587872549, 129.15281641296056), // 지도의 중심좌표
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.15261587872549, 129.15281641296056), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>동백섬</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
+
+			{% elif request.GET.문화재명 == '장산 마고당,천제단' %}
+				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
+					<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+							center: new kakao.maps.LatLng(35.19408069550446, 129.15549030789674),
+							level: 6, // 지도의 확대 레벨
+							mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+						}; 
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성한다 
+					
+					var marker = new kakao.maps.Marker({
+						position: new kakao.maps.LatLng(35.19408069550446, 129.15549030789674), // 마커의 좌표
+						map: map // 마커를 표시할 지도 객체
+						});
+					
+					var infowindow = new kakao.maps.InfoWindow({
+         				 content : '<div2 style="padding:5px; color="black";>장산 마고당,천제단</div>' // 인포윈도우에 표시할 내용
+     					 });	
+					infowindow.open(map, marker);	  
+				</script>
 
 			{% endif %}
 			{% endfor %}
