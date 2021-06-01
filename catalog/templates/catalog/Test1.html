@@ -18,8 +18,8 @@
 	</div>
 	
 	<div id="map">
-			{% for azureex in azureexs %}
-			{% if request.GET.문화재명 == '조숭고신왕지' %}
+			{% for azureex in azureexs %} 									<!--불러온 외장 db 속의 내용을 가져오는 반복문-->
+			{% if request.GET.문화재명 == '조숭고신왕지' %}					  <!--웹페이지 에서 받아온 request 값을 get method 로 받아와서 비교 구문과 같은지 비교 후 실행하는구문-->
 				<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4fda7aaa3141a849f28cb56d108e28a9"></script>
 					<script>
 					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -476,10 +476,14 @@
 	        </thead>
 	        <tbody>
 				{% for azureex in azureexs %}
-				<tr>
+				<tr> 
 					<td>{{azureex.연번}}</td>
-					<td><a href="{% url 'index' %}?문화재명={{azureex.문화재명}}" >{{azureex.문화재명}}</a></td>
+
+					<td><a href="{% url 'index' %}?문화재명={{azureex.문화재명}}" >{{azureex.문화재명}}</a></td> 
+					<!--하이퍼 링크를 통해 클릭 하면 문화재명을 get method 로 받아와 url 매칭을 시켜주는 구문-->
+
 					<td>{{azureex.지정번호}}</td>
+					
 					<td>{{azureex.소재지}}</td>
 				</tr>
 				{% endfor %}
