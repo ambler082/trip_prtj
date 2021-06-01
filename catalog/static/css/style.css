@@ -17,11 +17,24 @@ body {
    margin-left: 100px;
 }
 
-
-
 #map {
    position: absolute;
-   top: 50%;
+   top: 52.5%;
+   left: 50%;
+   background: #f00;
+   transform: translate(-50%, -50%);
+   width:1600px;
+   height:500px;
+   border:1px solid;
+   border-radius: 10px;
+   background-color:white;
+   margin-top: 30x;
+   padding : 50px;
+}
+
+#map2 {
+   position: relative;
+   top: 300px;
    left: 50%;
    background: #f00;
    transform: translate(-50%, -50%);
@@ -29,10 +42,9 @@ body {
    height:540px;
    border:1px solid;
    border-radius: 10px;
-   color: #CCF7FD;
    background-color:#79a2df;
    margin-top: 30x;
-
+   padding : 50px;
 }
 
 .map_img {
@@ -42,7 +54,6 @@ body {
    width: 500px;
    height: 520px;
    overflow: hidden;
-   border: 1px solid;
 }
 
 
@@ -56,7 +67,7 @@ body {
 
 
 .container {
-   margin-top: 600px;
+   margin-top: 50px;
 }
 
 #tr {
